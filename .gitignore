@@ -40,4 +40,6 @@ build/
 .env
 mvnw
 mvnw.cmd
+${project.build.directory}
+
 ## -------- --------------------------- --------
