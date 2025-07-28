@@ -17,7 +17,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "courses")
-@Data
+@Data // Lombok: Generates getters, setters, toString(), equals(), and hashCode()
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -27,10 +27,12 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    /** Display name (e.g., "Intro to GeoAI") */
+    /**  The title of the course. (e.g., "Intro to GeoAI") */
     @Column(nullable = false)
     private String title;
 
-    /** Short course description to inform users of its content */
+    /**
+     * An overview of the course content and objectives.
+     */
     private String description;
 }
